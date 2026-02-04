@@ -15,10 +15,20 @@ img{
     max-width: 100%;
     height: auto;
 }
+/* .site-wrapper {
+  outline: 3px solid red;
+} */
+
+.site-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+}
 
 .section-container{
-    width: 100vw;
-   height: 100vh;
+    width: 100%;
 }
 header{
     width: 100%;
@@ -225,10 +235,11 @@ nav button a:hover{
     background-color: #000;
     width: 100%;
     height: fit-content;
-    width: 100vw;
-   
+    /* width: 100vw; */
     
-    
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-content {
     display: flex;
@@ -505,10 +516,11 @@ line-height: 1.6;
     background-color: white;
     height: fit-content;
     margin-top: -130px;
-    width: 100vw;
+    
+   
+    
 }
 .counter-box{
-    /* flex: 1 1 300px;  */
     position: relative;
     width: 220px;
     margin-left: 20px;
@@ -535,16 +547,23 @@ line-height: 1.6;
 .counter-box p{
     color: gray;
 }
+/* footer */
+
+.footer-bg{
+    background: darkgoldenrod;
+    width: 100vw;
+}
 
 .footer-container{
-    width: 100vw;
+    width: 100%;
     background-color: darkgoldenrod;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px 7%;
     gap: 60px;
-    height: 70%;
+    /* min-height: fit-content; */
+    height: 70vh;
     /* flex-wrap: wrap;   */
 }
 
@@ -650,7 +669,135 @@ line-height: 1.6;
     position: relative;
     left: -80px;
 }
+/* timeline */
 
+.timeline-container{
+    width: 100%;
+}
+.timeline-container h1{
+    text-align: center;
+    
+}
+.timeline-heading{
+    font-weight: 600;
+    color: darkgoldenrod;
+}
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+}
+
+/* vertical center line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #1f2d5a;
+    transform: translateX(-50%);
+}
+
+.step {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.step.left { left: 0%; text-align: right; }
+.step.right { left: 50%; text-align: left; }
+
+.timeline-card {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.timeline-card h3 {
+    margin: 0 0 10px;
+    color: #1f2d5a;
+    font-size: 18px;
+}
+
+.timeline-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+.timeline-card i, .timeline-card span{
+    font-size: 30px;
+    color: darkgoldenrod;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .step{
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+
+    .step.left  {
+        left: 0;
+        text-align: left;
+    }
+    .step.right{
+        left: 20px;
+        text-align: left;
+    }
+
+    .step::before {
+        left: 13px;
+    }
+
+    .step::after {
+        left: 20px;
+        width: 30px;
+    }
+}
+/* connector dots */
+.step::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    background: #1f2d5a;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.step.left::before { right: -7px; }
+.step.right::before { left: -7px; }
+
+.step.left::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 40px;
+    height: 2px;
+    background: #1f2d5a;
+}
+
+.step.right::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #1f2d5a;
+}
 
 /* contact page */
 .contact-section{
@@ -1145,8 +1292,8 @@ input, textarea, select {
     justify-content: center;
     gap: 40px;
     flex-wrap: nowrap;
-    width: 100vw;
-   
+    /* width: 100vw;
+    */
 }
 
 
@@ -1260,6 +1407,7 @@ input, textarea, select {
     align-items: center;
     justify-content: center;
     width: 100vw;
+    /* margin-top: -40px; */
 }
 
 
@@ -1342,11 +1490,11 @@ input, textarea, select {
     margin-top: 20px;
 }
 .testimonials{
-    /* width: 100%;  */
+    width: 100%; 
     padding: 20px 8%;
     height: 600px;
     height: fit-content;
-    width: 100vw;
+    /* width: 100vw; */
     
 }
 
@@ -1361,8 +1509,8 @@ input, textarea, select {
 }
 .testimonials-wrapper{
     display: flex;
-    display: flex;
     gap: 20px;
+    
     width: max-content;
     animation: scrollAnim 25s infinite linear;
     margin: 40px 80px;
@@ -1370,6 +1518,10 @@ input, textarea, select {
     align-items: center;
     flex-shrink: 0;
     transition: 200ms ease-in-out;
+    width: 80vw;
+    margin: 20px auto;
+    /* overflow-x: hidden; */
+    padding: 0;
 }
 .testimonials-cards{
     width: 400px;
@@ -1382,6 +1534,8 @@ input, textarea, select {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 40px;
     border-radius: 10px;
+     margin: 20px auto;
+    background: white;
 }
 .testimonials-cards:hover{
      transform: scale(1.1);
@@ -1460,14 +1614,21 @@ input, textarea, select {
 /* youtube links */
 
 .youtube{
-    padding: 10px 8%;
-    width: 100vw;
+    width: 90vw;
+    margin: 20px auto;
+    overflow-x: hidden;
+    padding: 0;
+    padding: 20px 5%;
 }
 .video-slider {
     width: 100%;
     overflow: hidden;
-    padding: 40px 0;
+    padding: 40px 0; 
     margin: 0px;
+    /* width: 60vw;
+    margin: 20px auto;
+    /* overflow-x: hidden; */
+    /* padding: 0;  */
 }
 
 .video-track {
@@ -1476,6 +1637,11 @@ input, textarea, select {
     justify-content: center;
     gap: 20px;
     animation: slide 15s linear infinite;
+    width: 85vw;
+    margin: 0px auto;
+    overflow-x: hidden;
+    padding: 0;
+
 }
 .video-card {
     min-width: 380px;
@@ -1676,7 +1842,6 @@ details[open] .toggle-content {
      /* flex:  10px;    */
     width: 130px;
     text-align: center;
-    /* border: 1px solid #000; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1811,7 +1976,6 @@ summary::-webkit-details-marker {
 /* Floors cards container */
 .floors-container {
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: center;
     gap: 20px;
     justify-content: center;

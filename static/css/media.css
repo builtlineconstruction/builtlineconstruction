@@ -1,7 +1,10 @@
 /* mobile version */
-@media(max-width: 600px){
+@media screen and (max-width: 600px){
     .section-container{
+       max-width: 1200px;
         width: 100%;
+        margin: auto;
+        padding: 16px;
         overflow-x: hidden;
     }
     header{
@@ -209,9 +212,9 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
-     .testimonials-wrapper{
+     /* .testimonials-wrapper{
         flex-wrap: wrap;
-    }
+    } */
     .testimonials-cards{
         width: 400px;
     }
@@ -277,6 +280,9 @@
     .project-card{
         width: 100%;
         height: fit-content;
+    }
+    .floors-container{
+        flex-direction: column;
     }
     /* map */
     .project-iframe{
@@ -557,7 +563,8 @@
     }
     .about-section{
          height: fit-content;
-         width: 95%;
+         width:100%;
+         
          
     }
     .about-content{
@@ -601,6 +608,7 @@
     .counter-container, .footer-container{
         flex-direction: row;
         flex-wrap: wrap;
+        height: fit-content !important;
     }
     .template-container{
         padding: 0px 0px;
@@ -638,7 +646,7 @@
         bottom: 0px;
     }
     .footer-container{
-        height:500px;
+       height: fit-content;
     }
       /* get a quote */
     
@@ -664,7 +672,7 @@
     }
    
 }
-
+/* 
 @media (min-width:1400px) and (max-width:10000px){
     .section-container{
         width: 100%;
@@ -911,4 +919,4 @@
         height: fit-content;
     }
     
-}
+} */
