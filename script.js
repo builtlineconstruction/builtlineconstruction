@@ -15,7 +15,7 @@ const texts = [
     const heroText = document.getElementById("heroText");
 setInterval(() => {
     index = (index + 1) % texts.length; 
-    heroText.innerText = texts[index];
+    // heroText.innerText = texts[index];
 }, 3000);
 
 

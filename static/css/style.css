@@ -20,15 +20,16 @@ img{
 } */
 
 .site-wrapper {
-  width: 100%;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #ffffff;
+  width: 100vw;
+  max-width: 1800px;
+  margin: 0px auto;
+  background: transparent;
+ 
 }
 
 .section-container{
-    width: 100%;
+    width: 100vw;
+    
 }
 header{
     width: 100%;
@@ -549,10 +550,10 @@ line-height: 1.6;
 }
 /* footer */
 
-.footer-bg{
+/* .footer-bg{
     background: darkgoldenrod;
     width: 100vw;
-}
+} */
 
 .footer-container{
     width: 100%;
@@ -563,7 +564,7 @@ line-height: 1.6;
     padding: 20px 7%;
     gap: 60px;
     /* min-height: fit-content; */
-    height: 70vh;
+    height: 90vh;
     /* flex-wrap: wrap;   */
 }
 
@@ -755,12 +756,13 @@ line-height: 1.6;
         text-align: left;
     }
 
+
     .step::before {
-        left: 13px;
+        left: 15px;
     }
 
     .step::after {
-        left: 20px;
+        left: 25px;
         width: 30px;
     }
 }
@@ -1402,12 +1404,19 @@ input, textarea, select {
     text-align: center;
     background-color:#000;
     color: #fff;
-    height: 50px;
+    height: fit-content;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
     width: 100vw;
     /* margin-top: -40px; */
+}
+.copyright a{
+    color: #ffff;
+    text-decoration: none;
+    text-transform: uppercase;
+
 }
 
 
@@ -2065,12 +2074,48 @@ summary::-webkit-details-marker {
   overflow: hidden;
 }
 
-.project-image {
+.project-image{
   display: flex;
   width: 400%;
-  animation: scrollAnim 9s infinite linear;
+  /* animation: scrollAnim 5s infinite linear; */
   gap: 5px;
   height: 50vh;
+}
+.image1{
+    animation: scrollAnim 10s infinite linear;
+}
+.img2{
+    animation: scrollAnim 12s infinite linear;
+}
+.image3{
+    animation: scrollAnim 15s infinite linear;
+}
+.image4{
+    animation: scrollAnim 17s infinite linear;
+}
+.image5{
+    animation: scrollAnim 19s infinite linear;
+}
+.image6{
+    animation: scrollAnim 21s infinite linear;
+}
+.image7{
+    animation: scrollAnim 23s infinite linear;
+}
+.image8{
+    animation: scrollAnim 25s infinite linear;
+}
+.image9{
+    animation: scrollAnim 27s infinite linear;
+}
+.image10{
+    animation: scrollAnim 29s infinite linear;
+}
+.image11{
+    animation: scrollAnim 31s infinite linear;
+}
+.image12{
+    animation: scrollAnim 33s infinite linear;
 }
 
 .project-image img {
@@ -2471,8 +2516,4 @@ body {
   }
 }
 
-/* blogs */
 
-.blogs-container{
-    margin-top: 40px;
-}
