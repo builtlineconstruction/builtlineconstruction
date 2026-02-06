@@ -719,6 +719,11 @@ line-height: 1.6;
     width: 300px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
+.timeline-card:hover{
+     transform: translateY(-6px);
+     transition: transform all 15s ease-in;
+     cursor: pointer;
+}
 
 .timeline-card h3 {
     margin: 0 0 10px;
